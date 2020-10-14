@@ -1,5 +1,9 @@
 <h1> Index for Posts </h1>
 <% @post.each do |post| %>
-	<h3> <%= post.title %></h3>
-	<%= post.body %><br>
+	<div class="well">
+		<h6> <%= post.title %></h6>
+		<p><%= post.body %><br></p>
+		<%= link_to "Read More", post_path(post), 
+		:class => 'btn btn-default' %>
+	</div>
 <% end %>
